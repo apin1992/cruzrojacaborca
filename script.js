@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-expanded', isOpen);
   });
 
-  // Close mobile menu when a link is clicked
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       mainNav.classList.remove('open');
@@ -17,7 +16,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Modal Handling (Voluntariado & Dona)
+  // 2. Cursos Accordion Dropdowns
+  const courseItems = document.querySelectorAll('.course-item');
+
+  courseItems.forEach((item) => {
+    const trigger = item.querySelector('.course-trigger');
+    const panel = item.querySelector('.course-panel');
+
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.toggle('active');
+      trigger.setAttribute('aria-expanded', isActive);
+      panel.style.maxHeight = isActive ? panel.scrollHeight + 'px' : null;
+    });
+  });
+
+  // 3. Modal Handling (Voluntariado)
   const modalTriggers = document.querySelectorAll('[data-modal]');
   const modals = document.querySelectorAll('.modal-backdrop');
 
@@ -52,32 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  // 3. Donation Preset Buttons
-  const amountButtons = document.querySelectorAll('.amount-btn');
-  const customAmountInput = document.getElementById('customAmount');
-
-  amountButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      amountButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      customAmountInput.value = btn.getAttribute('data-amount');
-    });
-  });
-
-  // 4. Form Submission Feedback
+  // 4. Voluntariado Form -> Send to WhatsApp (637 133 8240)
   const volunteerForm = document.getElementById('volunteerForm');
   volunteerForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
+    const name = document.getElementById('volName').value.trim();
+    const phone = document.getElementById('volPhone').value.trim();
+    const area = document.getElementById('volArea').value;
+
+    const message = `Hola, me gustaría ser voluntario en Cruz Roja Caborca.%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}%0A*Área de interés:* ${encodeURIComponent(area)}`;
+    const whatsappURL = `https://wa.me/526371338240?text=${message}`;
+
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
     volunteerForm.reset();
     closeModal(document.getElementById('volunteerModal'));
-  });
-
-  const donateForm = document.getElementById('donateForm');
-  donateForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const amount = customAmountInput.value;
-    alert(`Redirigiendo a pasarela de pago por $${amount} MXN. ¡Gracias por apoyar a Cruz Roja Caborca!`);
-    closeModal(document.getElementById('donateModal'));
   });
 });

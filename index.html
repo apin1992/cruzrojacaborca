@@ -33,6 +33,8 @@
           <li><a href="#cursos">Cursos</a></li>
           <li><a href="#voluntariado">Voluntariado</a></li>
           <li><a href="#donar">Donar</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#galeria">Galería</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -55,7 +57,7 @@
 
         <figure class="media-card">
           <img src="assets/cruz-roja-inicio.webp" alt="Paramédicos y ambulancia de Cruz Roja Caborca" />
-          <figcaption>Imagen ilustrativa</figcaption>
+          <figcaption></figcaption>
         </figure>
       </div>
     </section>
@@ -69,10 +71,24 @@
             <p>
               Somos parte de la Cruz Roja Mexicana, institución humanitaria que desde 1910 ayuda a las personas más vulnerables. En Caborca, voluntarios y personal técnico atienden emergencias en la ciudad, ejidos y la carretera federal 2.
             </p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">5,000+</span>
+                <span class="stat-label">Servicios al año</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">120</span>
+                <span class="stat-label">Voluntarios</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">50</span>
+                <span class="stat-label">Años de servicio</span>
+              </div>
+            </div>
           </div>
           <figure class="media-card">
             <img src="assets/cruz-roja-nosotros.webp" alt="Equipo de voluntarios y personal técnico de Cruz Roja Caborca" />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption></figcaption>
           </figure>
         </div>
       </div>
@@ -85,7 +101,7 @@
         <div class="servicios-grid">
           <figure class="media-card">
             <img src="assets/cruz-roja-servicios.webp" alt="Interior de ambulancia equipada" />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption></figcaption>
           </figure>
 
           <div class="cards-grid">
@@ -115,16 +131,51 @@
       <div class="container">
         <h2 class="section-title">Cursos</h2>
         <div class="two-col-grid">
-          <ul class="course-list">
-            <li><span class="plus-sign">+</span> Primeros auxilios básicos</li>
-            <li><span class="plus-sign">+</span> RCP y uso de DEA</li>
-            <li><span class="plus-sign">+</span> Capacitación para empresas</li>
-            <li><span class="plus-sign">+</span> Técnico en Urgencias Médicas (TUM)</li>
-          </ul>
+          <div class="course-accordion">
+            <div class="course-item">
+              <button type="button" class="course-trigger" aria-expanded="false">
+                <span><span class="plus-sign">+</span> Primeros auxilios básicos</span>
+                <span class="chevron">▾</span>
+              </button>
+              <div class="course-panel">
+                <p>Aprende a actuar ante heridas, quemaduras, fracturas, atragantamiento y emergencias médicas comunes en el hogar o trabajo.</p>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <button type="button" class="course-trigger" aria-expanded="false">
+                <span><span class="plus-sign">+</span> RCP y uso de DEA</span>
+                <span class="chevron">▾</span>
+              </button>
+              <div class="course-panel">
+                <p>Capacitación práctica en reanimación cardiopulmonar para adultos, niños y lactantes, además del uso correcto del Desfibrilador Externo Automático.</p>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <button type="button" class="course-trigger" aria-expanded="false">
+                <span><span class="plus-sign">+</span> Capacitación para empresas</span>
+                <span class="chevron">▾</span>
+              </button>
+              <div class="course-panel">
+                <p>Programas diseñados para brigadas internas de protección civil, cumpliendo con normativas de seguridad laboral en Caborca y la región.</p>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <button type="button" class="course-trigger" aria-expanded="false">
+                <span><span class="plus-sign">+</span> Técnico en Urgencias Médicas (TUM)</span>
+                <span class="chevron">▾</span>
+              </button>
+              <div class="course-panel">
+                <p>Formación profesional teórico-práctica para integrarte a la atención prehospitalaria en ambulancias y servicios de emergencia.</p>
+              </div>
+            </div>
+          </div>
 
           <figure class="media-card">
             <img src="assets/cruz-roja-cursos.webp" alt="Capacitación en RCP y primeros auxilios" />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption></figcaption>
           </figure>
         </div>
       </div>
@@ -146,7 +197,7 @@
 
           <figure class="media-card">
             <img src="assets/cruz-roja-voluntariado.webp" alt="Voluntarios de Cruz Roja preparando suministros" />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption></figcaption>
           </figure>
         </div>
       </div>
@@ -161,15 +212,89 @@
             <p class="text-white-muted">
               Tu donativo mantiene las ambulancias en la calle. Participa en la Colecta Anual o dona directamente en nuestra delegación.
             </p>
-            <button type="button" class="btn btn-white" data-modal="donateModal">
+
+            <div class="bank-transfer-box">
+              <h3>Transferencia Bancaria</h3>
+              <ul>
+                <li><strong>Banco:</strong> BBVA</li>
+                <li><strong>CLABE:</strong> 123456789012345678</li>
+                <li><strong>Titular:</strong> Cruz Roja Delegación Caborca</li>
+              </ul>
+              <p class="bank-note">
+                Tus donativos se destinan a ambulancias, equipo médico, insumos y capacitación. Recibos deducibles disponibles a solicitud.
+              </p>
+            </div>
+
+            <a
+              href="https://www.cruzrojamexicana.org.mx/donar?sedeId=33"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-white"
+            >
               Donar en línea
-            </button>
+            </a>
           </div>
 
           <figure class="media-card dark-caption">
             <img src="assets/cruz-roja-donar.webp" alt="Caja de donativos con víveres y agua" />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption></figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noticias Section -->
+    <section id="noticias" class="section section-white">
+      <div class="container">
+        <h2 class="section-title">Noticias</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <img src="assets/noticia1.avif" alt="Colecta Anual Cruz Roja Caborca" />
+            <div class="news-body">
+              <span class="news-date">Noviembre 2026</span>
+              <h3>Arranca campaña de prevención en carretera</h3>
+              <p>Paramédicos de la delegación refuerzan operativos de vigilancia y auxilio en la Carretera Federal 2.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="assets/noticia2.jpg" alt="Curso de primeros auxilios en Caborca" />
+            <div class="news-body">
+              <span class="news-date">Octubre 2026</span>
+              <h3>Nueva generación de voluntarios en capacitación</h3>
+              <p>Jóvenes de Caborca concluyen su módulo inicial de primeros auxilios y atención prehospitalaria.</p>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <img src="assets/noticia3.jpg" alt="Equipamiento de ambulancias" />
+            <div class="news-body">
+              <span class="news-date">Septiembre 2026</span>
+              <h3>Mantenimiento y equipamiento de unidades</h3>
+              <p>Gracias a los donativos de la comunidad, se renovó equipo médico esencial en nuestras ambulancias.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="section section-cream">
+      <div class="container">
+        <h2 class="section-title">Galería</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item"><img src="assets/galeria1.jpg" alt="Evento local 1" /></figure>
+          <figure class="gallery-item"><img src="assets/galleria2.webp" alt="Evento local 2" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria3.jpg" alt="Evento local 3" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria4.jpg" alt="Evento local 4" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria5.jpg" alt="Evento local 5" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria6.jpg" alt="Evento local 6" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria7.jpg" alt="Evento local 7" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria8.jpg" alt="Evento local 8" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria9.jpg" alt="Evento local 9" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria10.jpg" alt="Evento local 10" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria11.jpg" alt="Evento local 11" /></figure>
+          <figure class="gallery-item"><img src="assets/galeria12.jpg" alt="Evento local 12" /></figure>
         </div>
       </div>
     </section>
@@ -178,17 +303,60 @@
     <section id="contacto" class="section section-white">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
-        <div class="two-col-grid reverse-desktop">
+        <div class="two-col-grid">
           <div class="contact-details">
-            <p><strong>Emergencias:</strong> <a href="tel:911" class="emergency-link">911</a></p>
-            <p><strong>Dirección:</strong> Heroica Caborca, Sonora, México</p>
-            <p><strong>Teléfono:</strong> <a href="tel:+526373720000" class="phone-link">(637) 372-0000</a></p>
+            <p>📍 Avenida K 50, Centro, 83600 Caborca, Sonora</p>
+            <p>🚨 <strong>Emergencias:</strong> <a href="tel:911" class="emergency-link">911</a></p>
+            <p>🏢 <strong>Administración:</strong> <a href="tel:+526373720000" class="phone-link">637 372 1177</a></p>
+            <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/526373721177" target="_blank" rel="noopener noreferrer" class="phone-link">637 372 1177</a></p>
+            <p>✉️ <a href="mailto:contacto@ejemplo.org" class="phone-link">cruzrojacaborca@gmail.com</a></p>
+            <p>🕒 Emergencias 24/7 · Oficinas L–V 8:00–16:00</p>
+
+            <div class="social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+              <a href="https://wa.me/526371338240" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp">WhatsApp</a>
+            </div>
           </div>
 
-          <figure class="media-card">
-            <img src="assets/cruz-roja-contacto.webp" alt="Instalaciones de la Delegación Cruz Roja Caborca" />
-            <figcaption>Imagen ilustrativa</figcaption>
-          </figure>
+          <!-- Formulario de Contacto (FormSubmit listo para pruebas; puedes cambiar action por tu URL de Formspree) -->
+          <form
+            id="contactForm"
+            class="contact-form"
+            action="https://formsubmit.co/japresaperez@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Cruz Roja Caborca" />
+            <input type="hidden" name="_captcha" value="false" />
+            <label>
+              Nombre
+              <input type="text" name="name" required placeholder="Tu nombre" />
+            </label>
+            <label>
+              Correo electrónico
+              <input type="email" name="email" required placeholder="tucorreo@ejemplo.com" />
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+            </label>
+            <button type="submit" class="btn btn-red full-width">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ubicación Section -->
+    <section id="ubicacion" class="section section-cream">
+      <div class="container">
+        <h2 class="section-title">Ubicación</h2>
+        <div class="map-wrapper">
+          <iframe
+            title="Mapa de Cruz Roja Mexicana Delegación Caborca"
+            src="https://www.google.com/maps?q=Cruz+Roja+Mexicana+Heroica+Caborca+Sonora&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>
@@ -196,8 +364,13 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>© 2026 Cruz Roja Mexicana Delegación Caborca</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <span>·</span>
+        <a href="https://wa.me/526371338240" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
     </div>
   </footer>
 
@@ -206,46 +379,25 @@
     <div class="modal-box" role="dialog" aria-labelledby="volunteerTitle">
       <button class="modal-close" aria-label="Cerrar">&times;</button>
       <h3 id="volunteerTitle">Registro de Voluntariado</h3>
-      <p>Déjanos tus datos y nos pondremos en contacto para la próxima sesión informativa.</p>
+      <p>Déjanos tus datos y se abrirá WhatsApp para enviar tu solicitud directamente.</p>
       <form id="volunteerForm" class="modal-form">
         <label>
           Nombre completo
-          <input type="text" required placeholder="Ej. Ana López" />
+          <input type="text" id="volName" required placeholder="Ej. Ana López" />
         </label>
         <label>
           Teléfono / WhatsApp
-          <input type="tel" required placeholder="(637) 000-0000" />
+          <input type="tel" id="volPhone" required placeholder="(637) 000-0000" />
         </label>
         <label>
           Área de interés
-          <select>
+          <select id="volArea">
             <option value="Socorros">Socorros</option>
             <option value="Juventud">Juventud</option>
             <option value="Damas Voluntarias">Damas Voluntarias</option>
           </select>
         </label>
         <button type="submit" class="btn btn-red full-width">Enviar solicitud</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal: Donar -->
-  <div class="modal-backdrop" id="donateModal" aria-hidden="true">
-    <div class="modal-box" role="dialog" aria-labelledby="donateTitle">
-      <button class="modal-close" aria-label="Cerrar">&times;</button>
-      <h3 id="donateTitle">Donar a Cruz Roja Caborca</h3>
-      <p>Selecciona un monto o acude directamente a nuestra delegación en Heroica Caborca.</p>
-      <div class="donation-amounts">
-        <button type="button" class="amount-btn active" data-amount="100">$100 MXN</button>
-        <button type="button" class="amount-btn" data-amount="250">$250 MXN</button>
-        <button type="button" class="amount-btn" data-amount="500">$500 MXN</button>
-      </div>
-      <form id="donateForm" class="modal-form">
-        <label>
-          Otro monto (MXN)
-          <input type="number" id="customAmount" value="100" min="10" required />
-        </label>
-        <button type="submit" class="btn btn-red full-width">Continuar con donativo</button>
       </form>
     </div>
   </div>
